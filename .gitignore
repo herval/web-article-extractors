@@ -1,0 +1,10 @@
+.idea
+java_client/.gradle
+java_client/build
+java_client/gradle
+java_client/java_client.ipr
+java_client/java_client.iws
+java_client/parsing_client_java.iml
+java_client/parsing_client_java_main.iml
+java_client/parsing_client_java_test.iml
+.env

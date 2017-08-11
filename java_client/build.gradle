@@ -1,0 +1,43 @@
+buildscript {
+    ext.kotlin_version = '1.1.3-2'
+
+    repositories {
+        mavenCentral()
+    }
+
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
+    }
+}
+
+apply plugin: 'kotlin'
+apply plugin: 'java'
+apply plugin: 'application'
+
+mainClassName = 'extractors.Main'
+
+repositories {
+    mavenCentral()
+    jcenter()
+}
+
+dependencies {
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jre8:$kotlin_version"
+    compile "com.syncthemall:boilerpipe:1.2.2"
+    compile "com.syncthemall:diffbot-java-sdk:1.2.2"
+    compile "com.google.http-client:google-http-client-jackson2:1.17.0-rc"
+    testCompile 'junit:junit:4.12'
+}
+
+compileKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
+compileTestKotlin {
+    kotlinOptions {
+        jvmTarget = "1.8"
+    }
+}
+
